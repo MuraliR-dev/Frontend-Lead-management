@@ -34,10 +34,11 @@ function ViewLead() {
       });
   };
 
-  useEffect(() => {
-    getLead();
-    getNotes();
-  }, []);
+useEffect(() => {
+  getLead();
+  getNotes();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [id]);
 
   // Add Note
   const addNote = () => {
