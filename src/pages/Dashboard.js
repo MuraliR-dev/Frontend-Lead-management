@@ -27,9 +27,10 @@ function Dashboard() {
       });
   };
 
-  useEffect(() => {
-    getLeads();
-  }, [page]);
+useEffect(() => {
+  getLeads();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [page]);
 
 
 
@@ -73,9 +74,7 @@ function Dashboard() {
       });
   };
 
-  // ==========================
-  // STATUS FILTER
-  // ==========================
+
 
   const filterStatus = (value) => {
     setStatus(value);
